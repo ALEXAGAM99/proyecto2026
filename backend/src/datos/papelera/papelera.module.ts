@@ -1,0 +1,10 @@
+import { Module } from '@nestjs/common';
+import { PapeleraMedicosController, PapeleraMedicosRestaurarController, PapeleraMedicosDefinitivoController, PapeleraConsultasController, PapeleraConsultasRestaurarController, PapeleraConsultasDefinitivoController, PapeleraDescargosController, PapeleraDescargosRestaurarController, PapeleraDescargosDefinitivoController, PapeleraMedicamentosController, PapeleraMedicamentosRestaurarController, PapeleraMedicamentosDefinitivoController, PapeleraMedicamentosExternosController, PapeleraMedicamentosExternosRestaurarController, PapeleraMedicamentosExternosDefinitivoController, PapeleraPacientesController, PapeleraPacientesRestaurarController, PapeleraPacientesDefinitivoController } from './papelera.controller';
+import { PapeleraService } from './papelera.service';
+import { basededatos } from '../../basededatos/basededatos.provider';
+
+@Module({
+  controllers: [PapeleraMedicosController, PapeleraMedicosRestaurarController, PapeleraMedicosDefinitivoController, PapeleraConsultasController, PapeleraConsultasRestaurarController, PapeleraConsultasDefinitivoController, PapeleraDescargosController, PapeleraDescargosRestaurarController, PapeleraDescargosDefinitivoController, PapeleraMedicamentosController, PapeleraMedicamentosRestaurarController, PapeleraMedicamentosDefinitivoController, PapeleraMedicamentosExternosController, PapeleraMedicamentosExternosRestaurarController, PapeleraMedicamentosExternosDefinitivoController, PapeleraPacientesController, PapeleraPacientesRestaurarController, PapeleraPacientesDefinitivoController],
+  providers: [PapeleraService, ...basededatos]
+})
+export class PapeleraModule {}
