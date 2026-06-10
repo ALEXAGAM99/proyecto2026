@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  api:
+    build: 
+      context: ./backend
+    ports:
+      - "3005:3001"      
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+  web:
+    build:
+      context: ./frontend
+    ports:
+      - "80:80"          
+    depends_on:
+      - api              
