@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  border-radius: 9999px;
+  background: var(--scrollbar-track, transparent);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background: var(--scrollbar-thumb, rgba(161, 161, 170, 0.2));
+  transition: background 0.25s ease;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover, rgba(161, 161, 170, 0.4));
+}
+
+[data-theme="dark"] .custom-scrollbar {
+  --scrollbar-track: rgba(255, 255, 255, 0.02);
+  --scrollbar-thumb: rgba(255, 255, 255, 0.15);
+  --scrollbar-thumb-hover: rgba(255, 255, 255, 0.25);
+}
+[data-theme="light"] .custom-scrollbar {
+  --scrollbar-track: rgba(0, 0, 0, 0.02);
+  --scrollbar-thumb: rgba(0, 0, 0, 0.15);
+  --scrollbar-thumb-hover: rgba(0, 0, 0, 0.25);
+}
+
+
+
+button:hover {
+ cursor: pointer !important;
+}
+
+/*Logo del grafico*/
+#tv-attr-logo {
+  display: none !important; 
+}
+
+button , .icon , nav , a {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
